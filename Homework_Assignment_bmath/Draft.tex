@@ -1,0 +1,87 @@
+%Everything is owned by Aditya Teraiya. Unauthorized use is prohibited.
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in, top=1.3in]{geometry} % Adjusted top margin 
+% --- Core Layout & Structure ---
+\usepackage{fancyhdr, titlesec, multicol}
+
+% --- Advanced Mathematics ---
+\usepackage{amsmath, amssymb, amsfonts, mathtools}
+
+% --- Graphics, Colors & Custom Boxes ---
+\usepackage{graphicx, xcolor, tcolorbox, tikz}
+
+% --- Text Formatting & Lists ---
+\usepackage{enumitem, url, hyperref}
+\usepackage{bookmark}
+
+% --- Tables, Figures & Captions ---
+\usepackage{booktabs, array, float, caption, subcaption}
+
+% --- Code Snippets & Citations ---
+\usepackage{lipsum, listings}
+
+% Custom Box Definition as requested
+\newtcolorbox{box1}{
+  colback=purple!10!white,
+  colframe=purple!75!black,
+  boxrule=0pt,
+  leftrule=3pt,
+  rightrule=0pt,
+  toprule=0pt,
+  bottomrule=0pt,
+  sharp corners,
+  left=4pt,right=4pt,top=4pt,bottom=4pt
+}
+
+\newtcolorbox{box2}{
+  colback=blue!10!white,
+  colframe=blue!75!black,
+  boxrule=0pt,
+  leftrule=3pt,
+  rightrule=0pt,
+  toprule=0pt,
+  bottomrule=0pt,
+  sharp corners,
+  left=4pt,right=4pt,top=4pt,bottom=4pt
+}
+
+% Header Layout Configuration
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer settings
+\renewcommand{\headrulewidth}{0.5pt} % Adds a neat horizontal divider under your header metadata
+
+% Top Left Margin Content
+\fancyhead[L]{%
+  \textbf{Aditya Teraiya} \\
+  \textbf{\href{mailto: bmat2546@isibang.ac.in}{bmat2546}} \\
+   Indian Statistical Institute, Bangalore.
+}
+
+% Top Right Margin Content
+\fancyhead[R]{%
+  \textbf{Subject:} Course / Subject Name \\
+  \textbf{Assignment/Homework} \#1 \\
+  \textbf{Date:} \today
+}
+
+% Increase header height so the three rows of text do not collide with the page boundaries
+\setlength{\headheight}{42pt}
+
+\begin{document}
+
+\section*{Problem 1: Introduction}
+hi
+
+\begin{box1}
+  \textbf{Important Theorem:} This box is rendered using your custom style. It features a light purple background fill, a 3pt solid purple left margin accent, sharp corners, and a borderless layout.
+\end{box1}
+
+\section*{Problem 2: lmao Example}
+\lipsum[1] % Placeholder text
+
+\begin{box2}
+  \textbf{Final Answer:} $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+\end{box2}
+
+\end{document}
