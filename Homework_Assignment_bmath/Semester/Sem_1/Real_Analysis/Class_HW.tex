@@ -81,7 +81,12 @@
     \end{proof}
     \item Is there a explicit bijection from $\mathbb{N} \rightarrow \mathbb{Q}$ or other way around?
     \begin{proof}
-        Yes. Consider f:
+        Yes. Consider $S:\mathbb{N} \to \mathbb{Q}$ such that
+        $$S(x)=\begin{cases}
+          \frac{\delta(x)}{2\lfloor x \rfloor - x + 1}\\
+          0,x=0\\
+        \end{cases}$$
+        The sequence $S(0),S(S(0)),\cdots$ gives all positive rationals uniquely. 
     \end{proof}
 \end{enumerate}
 \item  Let $f: \mathbb{R} \to \mathbb{R}$ be a continuous function. Prove that if $f$ is bounded on every closed interval, then $f$ is bounded on $\mathbb{R}$.
