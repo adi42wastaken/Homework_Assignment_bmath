@@ -1,9 +1,9 @@
-PWD c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Homework_Assignment_bmath
+PWD c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Homework_Assignment_bmath/Semester/Sem_1/Real_Analysis
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Homework_Assignment_bmath/Draft.tex
-OUTPUT Draft.log
+INPUT c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Homework_Assignment_bmath/Semester/Sem_1/Real_Analysis/Class_HW.tex
+OUTPUT Class_HW.log
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/size11.clo
@@ -47,6 +47,8 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/tools/calc.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT c:/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/graphics/graphics.sty
@@ -260,10 +262,10 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
 INPUT c:/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
 INPUT c:/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
-INPUT ./Draft.aux
-INPUT ./Draft.aux
-INPUT Draft.aux
-OUTPUT Draft.aux
+INPUT ./Class_HW.aux
+INPUT ./Class_HW.aux
+INPUT Class_HW.aux
+OUTPUT Class_HW.aux
 INPUT c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -272,9 +274,7 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-OUTPUT Draft.pdf
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+OUTPUT Class_HW.pdf
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
@@ -299,13 +299,12 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT Draft.aux
+INPUT Class_HW.aux
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
