@@ -1,0 +1,149 @@
+%% Everything is owned by Aditya Teraiya. Unauthorized use is prohibited.
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in, top=1.3in]{geometry} % Adjusted top margin 
+% --- Core Layout & Structure ---
+\usepackage{fancyhdr, titlesec, multicol}
+
+% --- Advanced Mathematics ---
+\usepackage{amsmath, amssymb, amsfonts, mathtools, amsthm}
+
+% --- Graphics, Colors & Custom Boxes ---
+\usepackage{graphicx, xcolor, tcolorbox, tikz}
+
+% --- Text Formatting & Lists ---
+\usepackage{enumitem, url, hyperref}
+\usepackage{bookmark}
+
+% --- Tables, Figures & Captions ---
+\usepackage{booktabs, array, float, caption, subcaption}
+
+% --- Code Snippets & Citations ---
+\usepackage{lipsum, listings}
+
+% Custom Box Definition as requested
+\newtcolorbox{box1}{
+  colback=purple!10!white,
+  colframe=purple!75!black,
+  boxrule=0pt,
+  leftrule=3pt,
+  rightrule=0pt,
+  toprule=0pt,
+  bottomrule=0pt,
+  sharp corners,
+  left=4pt,right=4pt,top=4pt,bottom=4pt
+}
+
+\newtcolorbox{box2}{
+  colback=blue!10!white,
+  colframe=blue!75!black,
+  boxrule=0pt,
+  leftrule=3pt,
+  rightrule=0pt,
+  toprule=0pt,
+  bottomrule=0pt,
+  sharp corners,
+  left=4pt,right=4pt,top=4pt,bottom=4pt
+}
+% Source - https://tex.stackexchange.com/a/2244
+% Posted by Stefan Kottwitz, modified by community. See post 'Timeline' for change history
+% Retrieved 2026-07-28, License - CC BY-SA 3.0
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+
+% Header Layout Configuration
+\pagestyle{fancy}
+\fancyhf{} % Clear default header and footer settings
+\renewcommand{\headrulewidth}{0.5pt} % Adds a neat horizontal divider under your header metadata
+
+% Top Left Margin Content
+\fancyhead[L]{%
+  \textbf{Aditya Teraiya} \\
+  \textbf{\href{mailto: bmat2546@isibang.ac.in}{bmat2546}} \\
+   Indian Statistical Institute, Bangalore.
+}
+
+% Top Right Margin Content
+\fancyhead[R]{%
+  \textbf{Subject:} Linear Algebra \\
+  \textbf{Class Tests} \\
+  \textbf{Date:} \today
+}
+\newlist{Class Test}{enumerate}{1}
+\setlist[Class Test,1]{label=\textbf{Class Test \arabic*:}, leftmargin=*}
+
+% Increase header height so the three rows of text do not collide with the page boundaries
+\setlength{\headheight}{42pt}
+
+\begin{document}
+
+\begin{Class Test}
+    \item \boxed{28/07/2026} \\
+    Write down the general solution of the following matrix given in REF form: $A\vec{x} = \vec{b}$
+    $$\begin{bmatrix}[ccccc|c]
+        2 & 0 & 0 & 5 & 2 & 4\\
+        0 & 0 & 1 & 3 & 7 & 6\\
+        0 & 0 & 0 & -1 & 1 & 8\\
+    \end{bmatrix}$$
+    Also find two solutions of $A\vec{x} = \vec{0}$ where they are not scalar multiples of each other.
+    \begin{proof}
+        The matrix is already in REF form. So we simply solve from bottom and utimately get the general solution as follows:
+       $$ x= \begin{bmatrix}
+            x_1\\
+            x_2\\
+            x_3\\
+            x_4\\
+            x_5
+        \end{bmatrix}=
+        \begin{bmatrix} 22-3.5\alpha\\
+            \beta\\
+            30-10\alpha\\
+            \alpha-8\\
+            \alpha
+        \end{bmatrix}=
+        \alpha \begin{bmatrix} 
+            -3.5\\
+            0\\
+            -10\\
+            1\\
+            1
+        \end{bmatrix}+
+        \beta\begin{bmatrix} 
+            0\\
+            1\\
+            0\\
+            0\\
+            0
+        \end{bmatrix}+
+        \begin{bmatrix} 
+            22\\
+            0\\
+            30\\
+            -8\\
+            0
+        \end{bmatrix}, \alpha,\beta\in F$$
+    \end{proof}
+    For second part, simply consider these two
+    $$\begin{bmatrix}
+        0\\
+        0\\
+        0\\
+        0\\
+        0\\
+    \end{bmatrix},
+    \begin{bmatrix}
+        0\\
+        1\\
+        0\\
+        0\\
+        0\\
+    \end{bmatrix}$$ or something else idc.
+    \item hewwo!! $>\omega<$ 
+\end{Class Test}
+\end{document}
