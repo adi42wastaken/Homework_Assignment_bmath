@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/c:\\Users\\Aditya\\Aditya\\Aditya ISI\\ISI 26-29\\Homework_Assignment_bmath\\Homework_Assignment_bmath\\Semester\\Sem_1\\Probability\\HW_Worksheet.aux": true,
+        "**/c:\\Users\\Aditya\\Aditya\\Aditya ISI\\ISI 26-29\\Homework_Assignment_bmath\\Homework_Assignment_bmath\\Semester\\Sem_1\\Probability\\HW_Worksheet.log": true,
+        "**/c:\\Users\\Aditya\\Aditya\\Aditya ISI\\ISI 26-29\\Homework_Assignment_bmath\\Homework_Assignment_bmath\\Semester\\Sem_1\\Probability\\HW_Worksheet.gz": true,
+        "**/c:\\Users\\Aditya\\Aditya\\Aditya ISI\\ISI 26-29\\Homework_Assignment_bmath\\Homework_Assignment_bmath\\Semester\\Sem_1\\Probability\\HW_Worksheet.out": true
+    }
+}

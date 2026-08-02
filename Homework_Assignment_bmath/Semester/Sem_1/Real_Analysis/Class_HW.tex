@@ -64,15 +64,15 @@
   \textbf{Class Homework(s)} \\
   \textbf{Date:} \today
 }
-\newlist{Week}{enumerate}{1}
-\setlist[Week,1]{label=\textbf{Week \arabic*:}, leftmargin=*}
+\newlist{Day}{enumerate}{1}
+\setlist[Day,1]{label=\textbf{Day \arabic*:}, leftmargin=*}
 
 % Increase header height so the three rows of text do not collide with the page boundaries
 \setlength{\headheight}{42pt}
 
 \begin{document}
 
-\begin{Week}
+\begin{Day}
 \item  \begin{enumerate}
     \item Each of the four cards shown below has a number on one side and a letter on the other side. What is the minimum number of cards that must be turned in order to prove the correctness of this statement: "If a card has a vowel on one side, then it has an even number on the other side?" 
      $$\boxed{A} \boxed{C} \boxed{4} \boxed{7}$$
@@ -86,10 +86,39 @@
           \frac{\delta(x)}{2\lfloor x \rfloor - x + 1}\\
           0,x=0\\
         \end{cases}$$
-        The sequence $S(0),S(S(0)),\cdots$ gives all positive rationals uniquely. 
+        The sequence $S(0),S(S(0)),\cdots $ gives all positive rationals uniquely. \\
+        From this we can define a function $f:\mathbb{N} \to \mathbb{Q}$ as follows: $$f(n)=\begin{cases}
+          S^n(0), n \text{ is odd}\\
+          -S^n(0), n \text{ is even}\\
+          0, n=0
+        \end{cases}$$
     \end{proof}
 \end{enumerate}
-\item  Let $f: \mathbb{R} \to \mathbb{R}$ be a continuous function. Prove that if $f$ is bounded on every closed interval, then $f$ is bounded on $\mathbb{R}$.
-\item  Let $f: \mathbb{R} \to \mathbb{R}$ be a continuous function. Prove that if $f$ is bounded on every closed interval, then $f$ is bounded on $\mathbb{R}$.
-\end{Week}
+\item  Proposition(with proofs):\begin{enumerate}
+  \item  $A\setminus (B\cup C)=(A\setminus B)\cap (A\setminus C)$
+  \begin{proof}
+
+    $x\in $ LHS $\implies x\in A$ and $x\notin B\cup C$ \\
+    $\implies x\in A$ and $(x\notin B \text{ or } x\notin C)$ \\ 
+    $\implies x\in A\setminus B \text{ and } x\in A\setminus C$ \\
+    $\implies x\in (A\setminus B)\cap (A\setminus C)$ \\
+    Thus, LHS $\subseteq$ RHS. \\
+    Now, $x\in $ RHS $\implies x\in A\setminus B \text{ and } x\in A\setminus C$ \\
+    $\implies x\in A$ and $(x\notin B \text{ or } x\notin C)$ \\
+    $\implies x\in A$ and $x\notin B\cup C$ \\
+    $\implies x\in A\setminus (B\cup C)$ \\
+    Thus, RHS $\subseteq$ LHS. \\
+    Hence, LHS = RHS.
+  \end{proof}
+  \item $A\setminus (B\cap C)=(A\setminus B)\cup (A\setminus C)$\\
+  The argument via Venn diagram.
+\end{enumerate}
+
+\item  Prove the well ordering principle of $\mathbb{N}$ using the principle of mathematical induction.
+\begin{proof}
+    Let $S_n$ be an arbitrary non-empty subset of $\mathbb{N}$ with $n$ elements for some natural number $n$.
+    Clearly if $n=1,2$ then $S_n$ has a least element (If $n=1$, that element is the minimal; if $n=2$, we can compare the two elements and pick the smaller one). Assume $S_n$ has a least element for $n=k\in \mathbb{N}_{>2}$. Then consider $S_{k+1}.$ We know $k$ of those elements are from a specific $S_k.$ So, $S_{k+1}=S_k\cup \{\alpha\}.$ Now simply compare the least element of $S_k$ with $\alpha$ and pick the smaller one. Thus, $S_{k+1}$ has a least element. Hence, by induction, every non-empty subset of $\mathbb{N}$ has a least element.
+\end{proof}
+  \item
+\end{Day}
 \end{document}
