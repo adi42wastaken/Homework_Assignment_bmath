@@ -71,10 +71,60 @@
 \setlength{\headheight}{42pt}
 
 \begin{document}
-\section{Worksheet}
+\section{Exercise Sheet}
 \begin{enumerate}
-  \item 
-\end{enumerate}
+  \item uhhh... I'll pass on this one, chief. :/
+  \item A child has 12 blocks, of which 6 are black, 4 are red, 1 is white, and 1 is blue. If the child
+puts the blocks in a line, how many arrangements are possible?
+ $$\boxed{\frac{12!}{6!4!1!1!}}$$ 
+  \item How many different letter arrangements can be made from the letters MISSISSIPPI?
+  $$\boxed{\frac{11!}{4!4!2!}}$$
+  \item  20 workers are to be assigned to 20 different jobs, one to each job. How many different
+assignments are possible?
+$$\boxed{20!}$$
+  \item In how many ways can 8 people be seated in a row if
+  \begin{enumerate}
+    \item  there are no restrictions on the seating arrangement?
+    $$\boxed{8!}$$
+    \item  persons A and B must sit next to each other?
+    $$\boxed{2 \cdot 7!}$$
+    \item  there are 4 men and 4 women and no 2 men or 2 women can sit next to each other?
+    $$\boxed{2\cdot 4! \cdot 4!}$$
+    \item  there are 5 men and they must sit next to one another?
+    $$\boxed{5! \cdot 4!}$$
+    \item  there are 4 married couples and each couple must sit together?
+    $$\boxed{4! \cdot (2!)^4}$$
+  \end{enumerate}
 
+\item  Letters in the Morse code are formed by a succession of dashes and dots with repetitions
+permitted. How many letters is it possible to form with ten symbols or less?
+ $$\sum_{k=1}^{10} 2^k=2^{11}-2$$
+\item \textbf{Consider a grid with points $(m,n)\in\mathbb{Z}^2$. Suppose you  start at (0, 0) and at each step you can go either one step up or one step to the right. How many paths are there from (0, 0) to (100, 100)? How many paths from $(0, 0)$ to (100, 100) pass through (60, 40)?}\\
+So we have to go right 100 times and up 100 times. So the number of paths is some combination of \begin{verbatim}
+  r r r ... r u u u ... u
+\end{verbatim}
+This we obviously know is just $\binom{200}{100}.$\\
+In second one, we first go to $(60,40)$ and then go from $(60,40)$ to $(100,100)$. So the number of paths is $\binom{100}{60}^2.$
+\item If 8 identical blackboards are to be divided among 4 schools, how many divisions are possible?
+$$\boxed{\binom{11}{3}}$$
+How many if each school must receive at least 1 blackboard?
+$$\boxed{\binom{7}{3}}$$
+\item Suppose that 10 fish are caught at a lake that contains 5 distinct types of fish.
+\begin{enumerate}
+  \item How many different outcomes are possible, where an outcome specifies the numbers of
+caught fish of each of the 5 types?
+$$\boxed{\binom{14}{4}}$$
+\item How many outcomes are possible when 3 of the 10 fish caught are trout?
+$$\boxed{\binom{10}{3}}$$
+\item How many when at least 2 of the 10 are trout?
+$$\boxed{\binom{12}{4}}$$
+\end{enumerate}
+\item If $r_1$ indistinguishable things of one kind and $r_2$ indistinguishable things of a second kind are placed into $n$ cells, find the number of distinguishable arrangements.
+$$\boxed{\binom{n+r_1-1}{r_1}\cdot\binom{n+r_2-1}{r_2}}$$
+\end{enumerate}
+\section{Exercise Sheet}
+\begin{enumerate}
+  \item $>\omega<$
+\end{enumerate}
 \end{document}
 
