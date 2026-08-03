@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.21)  2 AUG 2026 22:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.21)  2 AUG 2026 22:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Homework_Assignment_bmath/Draft.tex"
-(c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Homework_Assignment_bmath/Draft.tex
+**"c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Computer/FCAP-Assignment-1.tex"
+(c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Computer/FCAP-Assignment-1.tex
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
 (c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -690,8 +690,8 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 ) (c:/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-) (./Draft.aux)
-\openout1 = `Draft.aux'.
+) (./FCAP-Assignment-1.aux)
+\openout1 = `FCAP-Assignment-1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
 LaTeX Font Info:    ... okay on input line 91.
@@ -770,34 +770,27 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count380
-LaTeX Font Info:    Trying to load font information for U+msa on input line 117.
- (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 117.
- (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-] (./Draft.aux)
+] (./FCAP-Assignment-1.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-06-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 28513 strings out of 467168
- 534415 string characters out of 5413705
- 1272568 words of memory out of 5000000
- 57356 multiletter control sequences out of 15000+600000
- 633916 words of font info for 64 fonts, out of 8000000 for 9000
+ 28441 strings out of 467168
+ 532918 string characters out of 5413705
+ 1258592 words of memory out of 5000000
+ 57291 multiletter control sequences out of 15000+600000
+ 629869 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 98i,11n,108p,518b,1295s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on Draft.pdf (1 page, 105373 bytes).
+ 98i,11n,108p,513b,1439s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
+Output written on FCAP-Assignment-1.pdf (1 page, 64588 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 79 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

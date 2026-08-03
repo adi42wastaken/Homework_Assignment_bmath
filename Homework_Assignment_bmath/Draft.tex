@@ -21,6 +21,26 @@
 % --- Code Snippets & Citations ---
 \usepackage{lipsum, listings}
 
+\lstdefinestyle{codestyle}{
+  language=C,
+  basicstyle=\ttfamily\footnotesize,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green!50!black},
+  stringstyle=\color{red!60!black},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  showstringspaces=false,
+  breaklines=true,
+  frame=single,
+  backgroundcolor=\color{gray!5},
+  rulecolor=\color{gray!30},
+  columns=fullflexible,
+  keepspaces=true
+}
+
+\lstset{style=codestyle}
+
 % Custom Box Definition as requested
 \newtcolorbox{box1}{
   colback=purple!10!white,
@@ -71,13 +91,26 @@
 \begin{document}
 
 \section*{Problem 1: Introduction}
-hi
+Here is a compact coding-style note while keeping the important theorem intact.
+
+\begin{lstlisting}[language=C]
+def main():
+    print("Hello from the code block")
+    return 0
+\end{lstlisting}
 
 \begin{box1}
-  \textbf{Important Theorem:} This box is rendered using your custom style. It features a light purple background fill, a 3pt solid purple left margin accent, sharp corners, and a borderless layout.
+  \textbf{Important Theorem:} Omg
 \end{box1}
 
 \section*{Problem 2: lmao Example}
+A short explanatory note with a code snippet:
+
+\begin{lstlisting}[language=C]
+import math
+x = (-b + math.sqrt(b*b - 4*a*c)) / (2*a)
+\end{lstlisting}
+
 \lipsum[1] % Placeholder text
 
 \begin{box2}

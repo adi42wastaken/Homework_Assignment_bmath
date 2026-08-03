@@ -1,8 +1,8 @@
-PWD c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Homework_Assignment_bmath
+PWD c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Computer
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Homework_Assignment_bmath/Draft.tex
+INPUT c:/Users/Aditya/Aditya/Aditya ISI/ISI 26-29/Homework_Assignment_bmath/Computer/Draft.tex
 OUTPUT Draft.log
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -263,9 +263,6 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
 INPUT c:/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT c:/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
-INPUT c:/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
-INPUT c:/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT ./Draft.aux
 INPUT ./Draft.aux
 INPUT Draft.aux
