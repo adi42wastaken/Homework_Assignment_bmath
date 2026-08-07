@@ -10,6 +10,26 @@
 
 % --- Graphics, Colors & Custom Boxes ---
 \usepackage{graphicx, xcolor, tcolorbox, tikz}
+\usetikzlibrary{shapes.geometric,shapes.arrows,calc,shapes.symbols}
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!10]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+%\tikzstyle{loop} = [hexagon, hexagon left angle=60, hexagon right angle=60, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=yellow!30]
+\tikzset{
+  hexagon/.style={
+    signal,
+    signal to=east and west, % This creates the /---\ \---/ points on both sides
+    signal pointer angle=120, % Controls the "pointiness" (default is 90)
+    draw,
+    minimum width=2cm, 
+    minimum height=1cm, 
+    fill=purple!50
+  }
+}
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{loop}=[hexagon, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=purple!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
 
 % --- Text Formatting & Lists ---
 \usepackage{enumitem, url, hyperref}
@@ -73,8 +93,8 @@
 
 % Top Left Margin Content
 \fancyhead[L]{%
-  \textbf{Aditya Teraiya} \\
-  \textbf{\href{mailto: bmat2546@isibang.ac.in}{bmat2546}} \\
+  \textcolor{blue}{\textbf{\href{https://github.com/adi42wastaken}{Aditya Teraiya}}} \\
+  \textcolor{cyan}{\textbf{\href{mailto: bmat2546@isibang.ac.in}{bmat2546}}} \\
    Indian Statistical Institute, Bangalore.
 }
 
@@ -89,29 +109,370 @@
 \setlength{\headheight}{42pt}
 
 \begin{document}
-\section{Sequence type}
+\section{Theorical questions}
 \begin{enumerate}
-  \item 
+  \item Explain the characteristics and importance of algorithms.
+  \item Distinguish between algorithms, flowcharts, pseudocode, and programs.
+  \item Discuss various symbols with labeled diagrams.
 \end{enumerate}
 \section{Sequence type}
 \begin{enumerate}
-  \item 
-  \begin{lstlisting}[language=C] 
-    start
-    read the radius r
-    print 3.14 * r * 2
-    print 3.14 * r * r
-    end
- \end{lstlisting}
- \item 
+  \item Write an algorithm and draw the flowchart to find the area and perimeter of the circle
+  \begin{enumerate}[label=\arabic*:]
+    \item start
+    \item read the radius $r$
+    \item print the circumferance $2\pi r$ and area $\pi r^2$
+    \item stop
+  \end{enumerate}
+  \begin{tikzpicture}[node distance=2cm]
+
+\node (start) [startstop] {start};
+\node (in1) [io, below of=start] {read r};
+\node (out1) [io, below of=in1] {print $2\pi\cdot r$ , $\pi\cdot r^2$};
+\node (stop) [startstop, below of=out1] {stop};
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (out1);
+\draw [arrow] (out1) -- (stop);
+
+\end{tikzpicture}
+  \item Write an algorithm and draw a flowchart to convert temperature from Celsius to
+Fahrenheit. and vice versa
+\begin{enumerate}[label=\arabic*:]
+  \item start
+  \item read the temperature in Celsius $C$
+  \item print $F = \frac{9}{5}C + 32$
+  \item stop
+\end{enumerate}
+ \begin{tikzpicture}[node distance=2cm]
+
+\node (start) [startstop] {start};
+\node (in1) [io, below of=start] {read C};
+\node (out1) [io, below of=in1] {print $F = \frac{9}{5}C + 32$};
+\node (stop) [startstop, below of=out1] {stop};
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (out1);
+\draw [arrow] (out1) -- (stop);
+
+\end{tikzpicture}
+\begin{enumerate}[label=\arabic*:]
+  \item start
+  \item read the temperature in Fahrenheit $F$
+  \item print $C = \frac{5}{9}(F - 32)$
+  \item stop
+\end{enumerate}
+ \begin{tikzpicture}[node distance=2cm]
+
+\node (start) [startstop] {start};
+\node (in1) [io, below of=start] {read F};
+\node (out1) [io, below of=in1] {print $C = \frac{5}{9}(F - 32)$};
+\node (stop) [startstop, below of=out1] {stop};
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (out1);
+\draw [arrow] (out1) -- (stop);
+
+\end{tikzpicture}
+ \item Write an algorithm and draw the flowchart to determine the Simple Interest, reading
+Principle, Rate and Time.
+\begin{enumerate}[label=\arabic*:]
+  \item start
+  \item read the Principle $P$, Rate $R$ and Time $T$, define the Simple Interest $SI$
+  \item Process $SI = \frac{P \cdot R \cdot T}{100}$
+  \item print $SI$
+  \item stop
+\end{enumerate}
+\begin{tikzpicture}[node distance=2cm]
+  \node (start)[startstop]{start};
+  \node (in1)[io, below of=start]{read $P,R,T$ define $SI$};
+  \node (pro1)[process, below of=in1]{Process $SI=\frac{P \cdot R \cdot T}{100}$};
+  \node (ou2)[io, below of=pro1]{print $SI$};
+  \node (stop)[startstop, below of=ou2]{stop};
+  \draw [arrow] (start)--(in1)--(pro1)--(ou2)--(stop);
+\end{tikzpicture}
+
+ \item Write algorithms and flowcharts:
+ \begin{enumerate}
+  \item Using a third variable
+  \begin{enumerate}[label=\arabic*:]
+    \item start
+    \item read a,b,c
+    \item process c=a; a=b; b=c;
+    \item print a,b
+    \item stop
+    \end{enumerate}
+    \begin{tikzpicture}[node distance=2cm]
+  \node (start)[startstop]{start};
+  \node (in1)[io, below of=start]{read $a,b$ define $c$};
+  \node (pro1)[process, below of=in1]{Process $c=a; a=b; b=c;$};
+  \node (ou2)[io, below of=pro1]{print $a,b$};
+  \node (stop)[startstop, below of=ou2]{stop};
+  \draw [->] {(start)--(in1)--(pro1)--(ou2)--(stop)};
+\end{tikzpicture}
+  \item Without using a third variable
+   \begin{enumerate}[label=\arabic*:]
+    \item start
+    \item read a,b
+    \item process a=a+b;b=a-b;a=a-b;
+    \item print a,b
+    \item stop
+    \end{enumerate}
+    \begin{tikzpicture}[node distance=2cm]
+  \node (start)[startstop]{start};
+  \node (in1)[io, below of=start]{read $a,b$};
+  \node (pro1)[process, below of=in1]{Process $a=a+b; b=a-b; a=a-b;$};
+  \node (ou2)[io, below of=pro1]{print $a,b$};
+  \node (stop)[startstop, below of=ou2]{stop};
+  \draw [->] {(start)--(in1)--(pro1)--(ou2)--(stop)};
+\end{tikzpicture}
+\end{enumerate}
 \end{enumerate}
 \section{Conditional type}
 \begin{enumerate}
-  \item 
+  \item Write an algorithm and draw the flowchart to check whether number is even or odd.
+    \begin{enumerate}[label=\arabic*:]
+    \item start
+    \item read $a$
+    \item process if the remainder of $a$ when divided by 2 is 0
+    \item print (if true) even; (if false) odd
+    \item stop
+    \end{enumerate}
+    \begin{tikzpicture}[node distance=4cm]
+      \node (start)[startstop]{start};
+      \node (in1)[io, below of=start]{read $a$};
+      \node (d1)[decision, below of=in1]{$a\% 2==0$};
+      \node (ou1)[io, left of=d1]{print Even};
+      \node (ou2)[io, right of=d1]{print Odd};
+      \node (stop)[startstop,below of=d1]{stop};
+      \draw [->](start)--(in1);
+      \draw [->](in1)--(d1);
+      \draw [->](d1)--(ou1) node[midway, above] {true};
+      \draw [->](d1)--(ou2) node[midway, above] {false};
+      \draw [->](ou1)--(stop);
+      \draw [->](ou2)--(stop);
+    \end{tikzpicture}
+  \item Write an algorithm and draw the flowchart to check whether given year is a leap year or
+  not.
+     \begin{enumerate}[label=\arabic*:]
+    \item start
+    \item read $a$
+    \item process if the remainder of $a$ when divided by 4 is 0
+    \item print (if true) leap year; (if false) not
+    \item stop
+    \end{enumerate}
+    \begin{tikzpicture}[node distance=4cm]
+      \node (start)[startstop]{start};
+      \node (in1)[io, below of=start]{read $a$};
+      \node (d1)[decision, below of=in1]{$a\% 4==0$};
+      \node (ou1)[io, left of=d1, xshift=-1cm]{leap year};
+      \node (ou2)[io, right of=d1, xshift=1cm]{not leap year};
+      \node (stop)[startstop,below of=d1]{stop};
+      \draw [->](start)--(in1);
+      \draw [->](in1)--(d1);
+      \draw [->](d1)-- (ou1) node[midway, above] {true};
+      \draw [->](d1)--(ou2) node[midway, above] {false};
+      \draw [->](ou1)--(stop);
+      \draw [->](ou2)--(stop);
+    \end{tikzpicture}
+  \item Write an algorithm and draw the flowchart to check if a triangle is equilateral triangle.
+      \begin{enumerate}[label=\arabic*:]
+    \item start
+    \item read $a,b,c$
+    \item process a==b==c is true or not
+    \item print (if true) equiv; (if false) not equilateral
+    \item stop
+    \end{enumerate}
+    \begin{tikzpicture}[node distance=3cm, scale=0.5]
+      \node (start)[startstop]{start};
+      \node (in1)[io, below of=start]{read $a$};
+      \node (d1)[decision, below of=in1]{$a==b$ and $b==c$};
+      \node (ou1)[io, left of=d1, xshift=-2cm]{equilateral};
+      \node (ou2)[io, right of=d1, xshift=2cm]{not equilateral};
+      \node (stop)[startstop,below of=d1]{stop};
+      \draw [->](start)--(in1);
+      \draw [->](in1)--(d1);
+      \draw [->](d1)-- (ou1) node[midway, above] {true};
+      \draw [->](d1)--(ou2) node[midway, above] {false};
+      \draw [->](ou1)--(stop);
+      \draw [->](ou2)--(stop);
+    \end{tikzpicture}
+  \item Write an algorithm and draw the flowchart to find largest of three numbers.
+      \begin{enumerate}[label=\arabic*:]
+    \item start
+    \item read $a,b,c$ and define $m,e$
+    \item process $d=(\mid a-b\mid + a+b)/2$ and then process $e=(\mid c-d\mid + c+d)/2$
+    \item print $e$
+    \item stop
+      \end{enumerate}
+  \begin{tikzpicture}[node distance=2cm]
+\node (start) [startstop] {start};
+\node (in1) [io, below of=start] {read $a,b,c;$ define $d,e$};
+\node (pr1) [process, below of=in1] {process $d=(\mid a-b\mid + a+b)/2$ and $e=(\mid c-d\mid + c+d)/2$};
+\node (out1)[io, below of= pr1]{print $e$};
+\node (stop) [startstop, below of=out1] {stop};
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (pr1);
+\draw [arrow] (pr1) -- (out1);
+\draw [arrow] (out1) -- (stop);
+
+\end{tikzpicture}
+  \item Write an algorithm and draw the flowchart to read the marks (0-100) and display the
+  grade. ( Grades: A(90-100), B( 75-89), C(60-74), F(Below 60).
+    \begin{enumerate}[label=\arabic*:]
+    \item start
+    \item read $m$
+    \item (if $m>89$) print Grade $A;$ (if $m>74$) print Grade $B$;(if $m>59$) print Grade $C$;(else) print Grade $D$  
+    \item stop
+    \end{enumerate}
+    \begin{tikzpicture}[node distance=2cm]
+      \node (start)[startstop]{start};
+      \node (in1)[io, below of=start]{read $m$};
+      \node (d1)[decision, below of=in1]{if $m>89$};
+      \node (o1)[io, right of=d1, xshift=3cm]{print Grade A};
+      \node (d2)[decision, below of=d1, yshift=-1cm]{$m>74$};
+      \node (o2)[io, right of=d2, xshift=3cm]{print Grade B};
+      \node (d3)[decision, below of=d2, yshift=-1cm]{$m>59$};
+      \node (o3)[io, right of=d3, xshift=3cm]{print Grade C};
+      %\node (d4)[decision, below of=d3, yshift=-1cm]{$$};
+      \node (o4)[io, below of=d3]{print Grade D};
+      \node (stop)[startstop, below of=o4]{stop};
+      \draw[->] (start)--(in1);
+      \draw[->] (in1)--(d1);
+      \draw[->] (d1)--(d2) node[midway, right]{else if};
+      \draw[->] (d1)--(o1) node[midway, above]{true};
+      \draw[->] (d2)--(d3) node[midway, right]{else if};
+      \draw[->] (d2)--(o2) node[midway, above]{true};
+      \draw[->] (d3)--(o3) node[midway, above]{true};
+      \draw[->] (d3)--(o4) node[midway, right]{else};
+      \draw[->] (o4)--(stop);
+    \end{tikzpicture}
 \end{enumerate}
 \section{Repetition type}
 \begin{enumerate}
-  \item 
+  \item Write an algorithm and draw the flowchart to find factorial of a number
+  \begin{enumerate}[label=\arabic*:]
+    \item start
+    \item read $n$ define $m$
+    \item check if the number is positive integer or not
+    \item (if true) process $m=n\cdot (n-1) \cdots 2 \cdot 1$; (if false) invalid entry
+    \item print $m$
+    \item stop
+  \end{enumerate}
+  \begin{tikzpicture}[node distance=4cm]
+      \node (start)[startstop]{start};
+      \node (in1)[io, below of=start]{read integer $n$, define $m$};
+      \node (d1)[decision, below of=in1]{$a>0$};
+      \node(h1)[hexagon, left of=d1, xshift=-2cm]{$i=1;i<n+1;i++$};
+      \node (p1)[process, below of=h1, xshift=-1cm]{m=n*i};
+      \node (ou1)[io, below of=p1,xshift=3cm]{print m};
+      \node (ou2)[io, right of=d1, xshift=1cm]{invalid entry};
+      \node (stop)[startstop,below of=d1]{stop};
+      \draw [->](start)--(in1);
+      \draw [->](in1)--(d1);
+      \draw [->](d1)-- (h1) node[midway, above] {true};
+      \draw [->](h1)--(p1) node [midway, right] {true};
+      \draw [->](p1) -| ($(h1.west)+(-1cm,0)$) -- (h1.west);
+      \draw [->](h1)--(ou1) node [midway, right] {false};
+      \draw [->](p1)--(ou1);
+      \draw [->](d1)--(ou2) node[midway, above] {false};
+      \draw [->](ou1)--(stop);
+      \draw [->](ou2)--(stop);
+    \end{tikzpicture}
+  \item Write an algorithm and draw the flowchart to check if a number is palindrome or not.
+  \item Write an algorithm and draw the flowchart to find sum of digits of a given number.
+  \begin{enumerate}[label=\arabic*:]
+    \item start
+    \item read $n$
+    \item check if $n$ is a positive integer or not
+    \item (if true) 
+    \item stop
+  \end{enumerate}
+  \item Write an algorithm and draw the flowchart to check if the entered phone number is 10 digit
+  \begin{enumerate}[label=\arabic*:]
+    \item start
+    \item read int $n$
+    \item process if $n/10^{10}$ is 0 and $n/10^9\geq1$
+    \item print (if true) yes 10 digit; (if false) not 10 digit
+    \item stop
+  \end{enumerate}
+  \begin{tikzpicture}[node distance=3cm, scale=0.5]
+      \node (start)[startstop]{start};
+      \node (in1)[io, below of=start]{read $a$};
+      \node (d1)[decision, below of=in1, yshift=-1cm]{$n/10^{10}==0;n/{10}^9>0$};
+      \node (ou1)[io, left of=d1, xshift=-3cm]{10 digit};
+      \node (ou2)[io, right of=d1, xshift=3cm]{not 10 digit};
+      \node (stop)[startstop,below of=d1, yshift=-1cm]{stop};
+      \draw [->](start)--(in1);
+      \draw [->](in1)--(d1);
+      \draw [->](d1)-- (ou1) node[midway, above] {true};
+      \draw [->](d1)--(ou2) node[midway, above] {false};
+      \draw [->](ou1)--(stop);
+      \draw [->](ou2)--(stop);
+    \end{tikzpicture}
+  \item Write an algorithm and draw the flowchart to find sum of first N natural numbers.
+     \begin{enumerate}[label=\arabic*:]
+   \item start
+   \item read $n,s=0$
+   \item process $s=\frac{n(n+1)}{2}$
+   \item print $s$
+   \item stop
+  \end{enumerate}
+  \begin{tikzpicture}[node distance=2cm]
+\node (start) [startstop] {start};
+\node (in1) [io, below of=start] {read $n;$ define $s=0$};
+\node (pr1) [process, below of=in1] {process $s=n*(n+1)/2$};
+\node (out1)[io, below of= pr1]{print $s$};
+\node (stop) [startstop, below of=out1] {stop};
+\draw [arrow] (start) -- (in1);
+\draw [arrow] (in1) -- (pr1);
+\draw [arrow] (pr1) -- (out1);
+\draw [arrow] (out1) -- (stop);
+
+\end{tikzpicture}
+  \item Write an algorithm and draw the flowchart to Generate the multiplication table for a given number up to 10.
+   \begin{enumerate}[label=\arabic*:]
+   \item start
+   \item read $n$ define $i=1$
+   \item print $``i\times n"=i\cdot n$ for $1\leq i \leq 10$
+   \item stop
+  \end{enumerate}
+  \begin{tikzpicture}[node distance=2cm]
+    \node (start)[startstop]{start};
+    \node(i1)[io, below of=start]{read $n$, define $i=1$};\\
+    \node(h1)[hexagon, below of=i1]{$i=1;i<11;i++$};
+    \node(o1)[io, right of=h1, xshift=5cm]{print: $i\times n=i*n$};
+    \node(stop)[startstop, below of=h1]{stop};
+    \draw[->] (start)--(i1);
+    \draw[->] (i1)--(h1);
+    \draw[->] (h1)--(o1);
+    \draw[->] (h1)--(stop);
+    \draw [->](o1)--($(o1)+(0,-1)$) -- ($(h1)+(1,-1)$) -- ($(h1.south)+(1,0)$);
+
+  \end{tikzpicture}
+  \item Write an algorithm and draw the flowchart to Generate the first N terms of the Fibonacci series.
+   \begin{enumerate}[label=\arabic*:]
+   \item start
+   \item read integer $n$ and float $p = \frac{1 + \sqrt 5}{2}$
+   \item print closest integer value of $\frac{p^i-(1-p)^i}{\sqrt{5}}$ for $1\leq i\leq n$
+   \item stop
+  \end{enumerate}
 \end{enumerate}
 \section{Using all}
+\begin{enumerate}
+  \item Design an algorithm and flowchart for an ATM system. Include appropriate decision blocks. Steps should include:
+  \begin{enumerate}[label=\roman*.]
+  \item  Insert Card
+  \item  Enter PIN
+  \item  Validate PIN
+  \item  Select Withdrawal
+  \item  Enter Amount
+  \item  Check Balance
+  \item  Dispense Cash
+  \item  Print Receipt
+  \item  Exit
+  \end{enumerate}
+  \item Design an algorithm and flowchart to:\\
+  Read marks in five subjects, Calculate total, Calculate average , Determine grade , Display
+  Pass/Fail\\
+  \textbf{Rules:} Pass if every subject has marks $\geq$ 40,\\
+  \textbf{Grade:} A ($\geq$ 90) , B (75-89) , C (60-74) , D (40-59) , F ($<$ 40)
+\end{enumerate}
 \end{document}
